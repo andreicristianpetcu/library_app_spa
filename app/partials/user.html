@@ -1,0 +1,68 @@
+<div class="row">
+    <div class="page-header">
+        <h1 id="tables">{{user.firstName +' '+ user.lastName}}</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="well">
+            <form class="form-horizontal">
+                <fieldset>
+                    <legend>Edit the user</legend>
+                    <div class="form-group">
+                        <label for="inputFirstName" class="col-lg-2 control-label">First Name</label>
+
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="inputFirstName" placeholder="First Name"
+                                   ng-model="user.firstName">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputLastName" class="col-lg-2 control-label">Last Name</label>
+
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="inputLastName" placeholder="Last name"
+                                   ng-model="user.lastName">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="inputEmail" placeholder="Email"
+                                   ng-model="user.email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+
+                        <div class="col-lg-10">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password"
+                                   ng-model="user.password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Roles</label>
+
+                        <div class="col-lg-10">
+                            <label for="role-user" class="col-lg-2 control-label">User</label>
+                            <input type="checkbox" class="form-control" id="role-user"
+                                   ng-model="rolesModel['USER']"/>
+                            <label for="role-admin" class="col-lg-2 control-label">Admin</label>
+                            <input type="checkbox" class="form-control" id="role-admin"
+                                   ng-model="rolesModel['ADMIN']"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-2">
+                            <a class="btn btn-default" href="#/users">Cancel</a>
+                            <button type="submit" class="btn btn-primary" ng-click="updateUser()">Save</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

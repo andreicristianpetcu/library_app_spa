@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="page-header">
+        <h1 id="tables">Books</h1>
+
+        <div class="left-inner-addon">
+            <input id="searchInput" type="text" class="form-control" placeholder="Search" ng-model="query">
+        </div>
+    </div>
+
+</div>
+
+
+<div class="left-container col-lg-2">
+    <sidebar-actions title="ACTIONS" items="sidebarMenuItems" on-action="sidebarActionSelected(action)">
+    </sidebar-actions>
+</div>
+<div class="col-lg-10">
+    <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>ISBN</th>
+            <th>Copies</th>
+            <th>Borrow/Return</th>
+            <th>Watch</th>
+        </tr>
+        </thead>
+        <tbody id="books">
+        <tr ng-repeat="book in books  | filter:query">
+            <td><a ng-href="#/book/{{book.id}}" class="bookTitleLink">{{book.title}}</a></td>
+            <td>{{book.author}}</td>
+            <td>{{book.isbn}}</td>
+            <td>
+                <ng-pluralize count="book.availableCopies"
+                              when="{'0': 'Unavailable',
+                     'one': '1 copy available',
+                     'other': '{} copies available'}">
+                </ng-pluralize>
+            </td>
+            <td>
+                <a id="borrowButton" ng-click="borrowBook(book)" ng-show="book.availableCopies > 0"
+                   class="btn btn-primary">Borrow</a>
+                <a id="returnButton" ng-click="returnBook(book)" ng-show="book.borrowedByCurrentUser" class="btn btn-default">Return</a>
+            </td>
+            <td>
+                <a id="watchButton" ng-click="watchBook(book)"
+                   ng-show="book.availableCopies == 0 && !book.borrowedByCurrentUser && !book.watchedByCurrentUser"
+                   ><span class="glyphicon glyphicon-eye-close text-muted"></span></a>
+                <a id="unwatchButton" ng-click="unwatchBook(book)"
+                   ng-show="book.availableCopies == 0 && !book.borrowedByCurrentUser && book.watchedByCurrentUser"
+                   ><span class="glyphicon glyphicon-eye-open text-success"></span></a>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+    <a id="btnAddBook" href="#/add_book/" class="btn btn-primary">add book</a>
+</div>

@@ -1,0 +1,28 @@
+{
+  "name": "ginkgo-seed-spa",
+  "version": "0.1.0",
+  "authors": [
+    "cegeka.be"
+  ],
+  "description": "The single page application component of the ginkgo seed, an angular and spring enabled seed",
+  "main": "app/index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-cookies": "~1.2.0",
+    "angular-mocks": "~1.2.0",
+    "angular-route": "~1.2.0",
+    "angular-scenario": "~1.2.0",
+    "angular-ui-bootstrap-bower": "~0.6.0",
+    "angular-ui-utils": "~0.0.4",
+    "bootstrap": "~3.0.0",
+    "jquery": "~1.10.2",
+    "lodash": "~2.2.1"
+  }
+}

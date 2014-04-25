@@ -1,0 +1,71 @@
+<div class="row">
+    <div class="page-header">
+        <h1>Show Book</h1>
+    </div>
+</div>
+
+<div class="row">
+    <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+</div>
+
+<div class="row">
+    <div class="col-lg-2" ng-show="book.coverImage">
+        <img src="{{book.coverImage}}" />
+    </div>
+
+    <div class="col-lg-8">
+
+        <div class="well">
+            <div class="form-horizontal">
+                <fieldset>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">ISBN</label>
+                        <span class="col-lg-10 form-group-info">{{book.isbn}}</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Title</label>
+                        <span class="col-lg-10 form-group-info">{{book.title}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Author</label>
+                        <span class="col-lg-10 form-group-info">{{book.author}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Copies</label>
+                        <span class="col-lg-10 form-group-info" click-to-edit
+                              click-to-edit-value="book.availableCopies"
+                              click-to-edit-save="saveAvailableCopies"
+                              click-to-edit-is-valid="validateAvailableCopies"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Description</label>
+                        <span class="col-lg-10 form-group-info">{{book.description}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Publisher</label>
+                        <span class="col-lg-10 form-group-info">{{book.publisher}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">PublishedDate</label>
+                        <span class="col-lg-10 form-group-info">{{book.publishedDate}}</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Borrowed by</label>
+                        <div class="col-lg-10 form-group-info">
+                            <div ng-repeat="borrower in book.borrowers">
+                                <span>{{borrower.userName}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-lg-10 col-lg-offset-2">
+            <a id="addBookCancel"class="btn btn-default" href="#/books">Back</a>
+        </div>
+    </div>
+</div>

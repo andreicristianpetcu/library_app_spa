@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" ng-app="userAdmin">
+<head>
+    <title>Admin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="css/bootstrap-cerulean.css"/>
+    <link rel="stylesheet" href="css/font-awesome.css"/>
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="#/" class="navbar-brand">Admin</a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#/">Home</a>
+                </li>
+                <li>
+                    <a href="#/users">Users</a>
+                </li>
+                <li>
+                    <a href="#/books">Books</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="page-header"></div>
+    <div ng-view></div>
+    <footer>
+        <div class="row">
+            <div>User Admin: v<span app-version></span></div>
+        </div>
+    </footer>
+</div>
+
+
+<script src="bower_components/lodash/dist/lodash.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="js/http-auth-interceptor.js" ></script>
+<script src="js/app.js"></script>
+<script src="js/services.js"></script>
+<script src="js/book/book.js"></script>
+<script src="js/book/book_service.js"></script>
+<script src="js/book/book_controller.js"></script>
+<script src="js/user/user.js"></script>
+<script src="js/user/user_service.js"></script>
+<script src="js/user/user_controller.js"></script>
+<script src="js/login/login.js"></script>
+<script src="js/login/login_service.js"></script>
+<script src="js/login/login_controller.js"></script>
+<script src="js/login/login_directive.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/directives.js"></script>
+<script src="bower_components/jquery/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/angular-ui-utils/modules/utils.js"></script>
+<script src="bower_components/angular-ui-bootstrap-bower/ui-bootstrap.min.js"></script>
+<script src="bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.js"></script>
+</body>
+</html>

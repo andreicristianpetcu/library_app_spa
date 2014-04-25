@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="jumbotron">
+        <h1>Welcome</h1>
+
+        <p>to User Administration pages.</p>
+        <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+        <div ng-controller='LoginController'>
+            <login rest-url='rest/login' after-login='redirectTo("/books")'></login>
+        </div>
+    </div>
+</div>

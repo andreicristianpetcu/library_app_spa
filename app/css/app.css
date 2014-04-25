@@ -1,0 +1,80 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700);
+
+.clearfix{
+    clear: both;
+}
+
+.sidebar {
+    width: 170px;
+    border-radius: 5px;
+    padding-bottom: 8px;
+    padding-right: 5px;
+    margin-bottom: 10px;
+    background-color: #EAEAEA;
+}
+
+.sidebar-section-header {
+    font-weight: 600;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 3px;
+}
+
+.sidebar-section-header i {
+    font-size: 13px;
+    padding-right: 5px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar li .active{
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+    background-color: #1993d9;
+    border-radius: 5px;
+    padding: 3px 15px;
+    margin-left: -15px;
+    margin-right: 5px;
+    display: block;
+}
+
+.bulletless-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.left-container {
+    position: relative;
+}
+
+.left-container .general-sidebar {
+    background-color: #F5F5F5;
+    color: #1B325C;
+}
+
+.left-container ul {
+    padding-left: 25px;
+    margin-bottom: 0px;
+}
+
+.left-container .panel-heading {
+    font-variant: small-caps;
+}
+
+.validation-error {
+    color: #ff0000;
+    margin-top: 45px;
+    margin-left: 90px;
+}
+.error-area {
+    overflow: auto;
+    margin-top: 100px;
+    height: 552px;
+}
+.form-group-info {
+    padding-top: 9px;
+}

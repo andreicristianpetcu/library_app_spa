@@ -1,0 +1,16 @@
+<div class="sidebar context-accordion general-sidebar">
+    <div class="sidebar-section-header"
+         ng-click="updateIcon('context-collapse-accordion-body','contextIconCollapse');"
+         href="#context-collapse-accordion-body"
+         data-toggle="collapse" data-parent=".context-accordion">
+        {{title}}<i id="iconCollapseToolbar"
+                  class="pull-right padding-right-small glyphicon glyphicon-chevron-down" ></i>
+    </div>
+    <div id="context-collapse-accordion-body" class="in">
+        <ul>
+            <li ng-repeat="item in items" >
+                <a href="" ng-click="selectMenuItem($index);">{{item.text}}</a>
+            </li>
+        </ul>
+    </div>
+</div>

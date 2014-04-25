@@ -1,0 +1,11 @@
+<div>
+    <div ng-show="!isAuthenticated()" class="login">
+        <input id="username" ng-model="username" placeholder="enter your username"/>
+        <input type="password" id="password" ng-model="password" placeholder="enter your password"/>
+        <button type="button" id="login" ng-click="login()">Login</button>
+    </div>
+
+    <div ng-show="isAuthenticated()" class="greeting">You are authenticated.
+        <button type="button" id="logout" ng-click="logout()">Logout</button>
+    </div>
+</div>
