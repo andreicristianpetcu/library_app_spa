@@ -102,7 +102,7 @@ describe('service', function () {
             authService.logout();
             $httpBackend.verifyNoOutstandingExpectation();
 
-            expect(cookieStore.remove).toHaveBeenCalledWith('user');
+            expect(cookieStore.remove).toHaveBeenCalledWith('useri2');
         }));
 
 
